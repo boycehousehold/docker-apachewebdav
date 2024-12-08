@@ -45,3 +45,8 @@ jobs:
             ${{ secrets.DOCKER_USERNAME }}/webdav:latest
             ${{ secrets.DOCKER_USERNAME }}/webdav:${{ steps.date.outputs.today }}
 
+      - name: Download build artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: ./build
