@@ -48,4 +48,4 @@ jobs:
       - name: Pull & Save Docker image
         run: |
           docker pull ${{ secrets.DOCKER_USERNAME }}/webdav:latest
-          docker save "${{ secrets.DOCKER_USERNAME }}/webdav:latest" -o "${{ secrets.DOCKER_USERNAME }}/webdav.tar"
+          docker save "${{ secrets.DOCKER_USERNAME }}/webdav:latest" -o "./webdav.tar"
