@@ -45,3 +45,6 @@ jobs:
             ${{ secrets.DOCKER_USERNAME }}/webdav:latest
             ${{ secrets.DOCKER_USERNAME }}/webdav:${{ steps.date.outputs.today }}
 
+      - name: Pull Docker image
+        run: |
+          docker pull ${{ secrets.DOCKER_USERNAME }}/webdav:latest
